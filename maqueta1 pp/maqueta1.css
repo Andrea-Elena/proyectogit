@@ -1,0 +1,44 @@
+.container-fluid{
+  background-image: url(headerceleste.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container-principal {
+  background-color: aliceblue;
+  height: 100px;
+}
+.obj-grid_6-12{
+  margin-bottom: 10px;
+}
+
+
+.navbar-brand{
+  margin-top: 10px;
+  font-size: xx-large;
+}
+
+
+.flm-overlay{
+  padding-left: 200px;
+  margin-left: 100px;
+}
+
+#tablaespecialidades{
+  border: solid #2d3548;
+  background-color: aquamarine;
+  height: 100%;
+}
+header{
+  background-color: rgba(106, 215, 215, 0.737);
+  text-align: center;
+  color: darkblue;
+}
+td{
+  border: solid #2d3548;
+}
+#barra-calendario{
+  background-color: maroon;
+}
+footer{
+  background-color: #A9D9D0;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrea Alvarez">
+    <meta name="description" content="aplicacion agenda medica">
+    <meta name="keywords" content="agenda, medicina, doctores">
+    <title>Agenda Médica</title>
+    <link rel="icon" type="image/x-icon" href="logomaqueta1.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--abajo:estilo para barra de fecha-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="maqueta1.css">
+    <link rel="stylesheet" href="maqueta1.scss">
+    <link rel="stylesheet" type="text/css" href="https://design.online.uga.edu/css/base.css">
+    
+</head>
+<body onload="reloj()">
+   <div class="container-fluid">
+        <div id="container-principal" class="row">
+            <div class="col-12 mt-3">
+                <!--inicio navbar-->
+                <nav class="navbar bg-body-tertiary">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                      <img src="/logomaqueta1.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                      Agenda Médica
+                    </a>
+                  </div>
+                </nav>
+                  <!--fin navbar-->
+
+                  <!--comienzo barra de fecha-->
+                  <div id="barra-calendario" class="row">
+                    <div class="col-12 ">
+                      <input type="date" value="2023-01-15">
+                    </div>
+                  </div>
+            <!--fin barra de fecha-->
+
+        <!-- inicio filtro-->
+        <div class="container-fluid">
+          
+          <div class="flm-overlay">
+            <div class="obj-grid">
+              <div CLASS="obj-grid__6-12" style="margin-bottom: 10px;">
+          <h2></h2>
+          <form class="util-background-light-gray util-pad-all-sm util-pad-all-md@sm util-pad-all-lg@md util-display-none@print">
+          
+            <fieldset>
+              <legend class="cmp-heading-4 util-margin-bottom-sm util-text-center util-full-width"></legend>
+          
+              <div class="cmp-form-field">
+          
+                <label for="Search-field" class="cmp-form-label">
+                  Búsqueda
+                </label>
+                <div class="">
+                  <div class="util-position-relative">
+                    <input id="Search-field" class="cmp-form-field__input" type="search" placeholder="Especialidad" />
+                  </div>
+                </div>
+              </div>
+          
+              <p class="util-margin-vert-none util-color-light-gray util-text-italic">
+                Searches are NOT case sensitive, and boolean searching is supported.
+              </p>
+          
+              <div class="obj-grid obj-grid--gap-md@sm util-margin-vert-lg">
+                <div class="obj-grid__full obj-grid__half@sm obj-grid__quarter@md">
+                  <div class="cmp-form-select">
+                    <label for="subject-select" class="cmp-form-label">
+                      Fecha
+                    </label>
+                    <div class="">
+                      <select id="subject-select" class="cmp-form-select__dropdown" name="Search and Filter">
+                        <option value="1">All Subjects</option>
+                        <option value="2">Education</option>
+                        <option value="3">Business</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="obj-grid__full obj-grid__half@sm obj-grid__quarter@md">
+                  <div class="cmp-form-select">
+                    <label for="colleges-select" class="cmp-form-label">
+                      Colleges
+                    </label>
+                    <div class="">
+                      <select id="colleges-select" class="cmp-form-select__dropdown" name="Search and Filter">
+                        <option value="1">All Colleges</option>
+                        <option value="2">College of Education</option>
+                        <option value="3">College of Engineering</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="obj-grid__full obj-grid__half@sm obj-grid__quarter@md">
+                  <div class="cmp-form-select">
+                    <label for="degree-select" class="cmp-form-label">
+                      Degree Type
+                    </label>
+                    <div class="">
+                      <select id="degree-select" class="cmp-form-select__dropdown" name="Search and Filter">
+                        <option value="1">Any</option>
+                        <option value="2">Undergraduate</option>
+                        <option value="3">Graduate</option>
+                        <option value="4">Post Baccalaureate</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="obj-grid__full obj-grid__half@sm obj-grid__quarter@md">
+                  <div class="cmp-form-select">
+                    <label for="degree-type-select" class="cmp-form-label">
+                      Degree Type
+                    </label>
+                    <div class="">
+                      <select id="degree-type-select" class="cmp-form-select__dropdown" name="Search and Filter">
+                        <option value="1">Any</option>
+                        <option value="2">Certificate</option>
+                        <option value="3">Degree</option>
+                      </select>ton
+                     cmp-button--full-width
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+          
+            </fieldset>
+          
+            <div class="obj-grid obj-grid--gap-md@sm">
+              <div class="obj-grid__full obj-grid__quarter@md">
+                <button class="cmp-but" type="submit">
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+               </div>
+          </div>
+          </div>
+        </div>
+        <!--fin filtro-->
+        <br> 
+      
+      <!--inicio cards-->
+      <div class="card-group">
+        <div class="card">
+          <img src="imagen pp5.webp" class="card-img-top" alt="Especialidades">
+          <div class="card-body">
+            <h5 class="card-title">Especialidades Médicas</h5>
+            <p class="card-text">Guía rápida para orientar la búsqueda de especialistas.</p>
+            <a href="Especialidades médicas.html" class="btn btn-primary">Ir</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Ir</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <a href="#" class="btn btn-primary">Ir</a>
+          </div>
+        </div>
+      </div>
+
+      <!--fin cards--> 
+      <footer>
+        <a href="#título">subir al inicio</a>
+        <a href="mailto:contectoagendamedica@gmail.com">contacto agenda médica</a>
+        <p>Copyright 2023</p>
+      </footer>
+      </div>
+        
+      <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>  
+      <script src="maqueta1.js"></script>
+</body>
+</html>
